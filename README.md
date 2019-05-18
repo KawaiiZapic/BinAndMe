@@ -1,2 +1,2 @@
-# Bin-Me
-I'm a rubbish in a bin.
+# BinAndMe
+I'm a rubbish in the bin.
