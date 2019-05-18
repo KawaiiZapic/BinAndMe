@@ -10,5 +10,32 @@ func main() {
         if err != nil {
                 fmt.Println(err)
         }
-        fmt.Println("I'm a rubbish in the bin. --",usr.Name)
+        var name = usr.Name
+        var nameline = "    =@@@^"
+        //TODO:Count name length and insert into Line
+        fmt.Println("               ,]OOOOOOOOOOO]`              ")
+        fmt.Println("             ,@@@@@@@@@@@@@@@@@^            ")
+        fmt.Println("            @@@@`            @@@@`          ")
+        fmt.Println(",OOOOOOOOOO@@@@@OOOOOOOOOOOOOO@@@@OOOOOOOOOO")
+        fmt.Println(" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+        fmt.Println("    =@@@^                           =@@@/   ")
+        fmt.Println(nameline)
+        fmt.Println("    =@@@^                           =@@@^   ")
+        fmt.Println("    =@@@^   ,/OO`   ,/OO`   ,/OO`   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^   =@@@^   =@@@^   =@@@^   =@@@^   ")
+        fmt.Println("    =@@@^    ,[[     ,[[     ,[[    =@@@^   ")
+        fmt.Println("    =@@@^                           =@@@^   ")
+        fmt.Println("    =@@@^                           =@@@^   ")
+        fmt.Println("     @@@@\\]]]]]]]]]]]]]]]]]]]]]]]]]/@@@@`   ")
+        fmt.Println("      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`    ")
+
 }
