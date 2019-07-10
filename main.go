@@ -21,6 +21,7 @@ func main() {
         if (runtime.GOOS!="windows"){
                 whoname := exeSysCommand("whoami")
                 whoname = strings.Replace(whoname, "\n", "", -1)
+                whoname = strings.Replace(whoname, "\r", "", -1)
                 name = "|"+whoname+"|"
         }else{
                 usr, err := user.Current()
