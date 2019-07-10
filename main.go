@@ -3,11 +3,12 @@ package main
 import (
         "fmt"
         "strings"
+        "runtime"
         "os/user"
         "os/exec"
 )
 func exeSysCommand(cmdStr string) string {
-    cmd := exec.Command("sh", "-c", cmdStr)
+    cmd := exec.Command(cmdStr)
     opBytes, err := cmd.Output()
     if err != nil {
         fmt.Println(err)
@@ -16,15 +17,17 @@ func exeSysCommand(cmdStr string) string {
     return string(opBytes)
 }
 func main() {
-        if (runtime.GOOS=="drawin"){
+        var name = ""
+        if (runtime.GOOS!="windows"){
                 whoname := exeSysCommand("whoami")
-                var name = "|"+whoname+"|"
+                whoname = strings.Replace(whoname, "\n", "", -1)
+                name = "|"+whoname+"|"
         }else{
                 usr, err := user.Current()
                 if err != nil {
                         fmt.Println(err)
                 }
-                var name = "|"+usr.Name+"|"
+                name = "|"+usr.Name+"|"
         }
         var nameline = "    =@@@^"
         var namelen = strings.Count(name,"")-1
