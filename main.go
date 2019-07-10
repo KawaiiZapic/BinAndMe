@@ -2,15 +2,30 @@ package main
 
 import (
         "fmt"
+        "strings"
         "os/user"
+        "os/exec"
 )
-
+func exeSysCommand(cmdStr string) string {
+    cmd := exec.Command("sh", "-c", cmdStr)
+    opBytes, err := cmd.Output()
+    if err != nil {
+        fmt.Println(err)
+        return ""
+    }
+    return string(opBytes)
+}
 func main() {
-        usr, err := user.Current()
-        if err != nil {
-                fmt.Println(err)
+        if (runtime.GOOS=="drawin"){
+                whoname := exeSysCommand("whoami")
+                var name = "|"+whoname+"|"
+        }else{
+                usr, err := user.Current()
+                if err != nil {
+                        fmt.Println(err)
+                }
+                var name = "|"+usr.Name+"|"
         }
-        var name = "|"+usr.Name+"|"
         var nameline = "    =@@@^"
         var namelen = strings.Count(name,"")-1
         const spacelen = 27
